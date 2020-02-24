@@ -62,7 +62,7 @@ class MyClass:
         print('---------------------')
         print(u'[enviroment]: {}'.format(self.enviroment))
         print('---------------------')
-        self.collection = self.db.collection(u'{}-jnl'.format(self.enviroment)).document(u'status').collection(u'jnl')
+        #self.collection = self.db.collection(u'{}-jnl'.format(self.enviroment)).document(u'status').collection(u'jnl')
 
     def search_doc(self):
         d = self.from_args('days-ago=(\d+)$')
@@ -99,7 +99,7 @@ class MyClass:
             elif 'exe' not in doc.to_dict()['status']:
                 print("not in doc.to_dict()['status']")
             print(u'{}, {}'.format(doc.id, doc.to_dict()))
-            print('---------------------')
+            #print('---------------------')
             cnt = cnt+1
         print(cnt)
         pass
